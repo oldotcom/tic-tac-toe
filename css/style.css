@@ -9,16 +9,20 @@ body {
     background: #ff7b01;
 }
 
-.select-box {
+.select-box, .play-board {
     position: absolute;
     top: 50%;
     left: 50%;
-    padding: 20px 25px 25px;
     transform: translate(-50%, -50%);
+}
+
+.select-box {
+    padding: 20px 25px 25px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 8px;
     max-width: 330px;
     width: 100%;
+    display: none;
 }
 
 .select-box .content {
@@ -48,7 +52,7 @@ body {
     border: none;
     outline: none;
     background: #ff7b01;
-    border-radius: 10px;
+    border-radius: 8px;
     color: #fff;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -65,3 +69,69 @@ body {
 .options button.playerO {
     margin-left: 5px;
 }
+
+.play-board .details {
+    background: #fff;
+    padding: 7px;
+    border-radius: 8px;
+}
+
+.play-board .details .players {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.play-board .details span {
+    position: relative;
+    width: 100%;
+    padding: 7px 0;
+    border-radius: 8px;
+    color: #ff7b01;
+    font-size: 18px;
+    text-align: center;
+    cursor: default;
+    z-index: 4;
+}
+
+.details span:first-child {
+    color: #fff;
+}
+
+.details .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: #ff7b01;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.details span.active {
+    color: #fff;
+}
+
+.play-board .play-area {
+    margin-top: 20px;
+}
+
+.play-board section {
+    display: flex;
+}
+
+.play-board section span {
+    display: block;
+    margin: 2px;
+    height: 80px;
+    width: 80px;
+    background: #fff;
+    border-radius: 8px;
+    font-size: 42px;
+    text-align: center;
+    line-height: 82px;
+    color: #ff7b01;
+}
+
+

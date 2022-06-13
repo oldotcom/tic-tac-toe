@@ -14,6 +14,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
 }
 
 .select-box {
@@ -22,7 +23,12 @@ body {
     border-radius: 8px;
     max-width: 330px;
     width: 100%;
-    /* display: none; */
+}
+
+.select-box.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
 }
 
 .select-box .content {
@@ -72,7 +78,15 @@ body {
 }
 
 .play-board {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.play-board.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .play-board .details {

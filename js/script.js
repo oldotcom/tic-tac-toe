@@ -5,7 +5,10 @@ const selectBox = document.querySelector('.select-box'),
       selectOBtn = selectBox.querySelector('.playerO'),
       playBoard = document.querySelector('.play-board'),
       allBox = document.querySelectorAll('section span'),
-      players = document.querySelector('.players');
+      players = document.querySelector('.players'),
+      resultBox = document.querySelector('.result-box'),
+      wonText = resultBox.querySelector('.won-text'),
+      replayBtn = resultBox.querySelector('button');
 
 window.onload = () => {
     for (let i = 0; i < allBox.length; i++) {
@@ -100,5 +103,28 @@ function selectWinner() {
     if (checkID(1, 2, 3, playerSign) || checkID(4, 5, 6, playerSign) || checkID(7, 8, 9, playerSign) || (checkID(1, 4, 7, playerSign)) || checkID(2, 5, 8, playerSign) || checkID(3, 6, 9, playerSign) || checkID(1, 5, 9, playerSign) || checkID(3, 5, 7, playerSign)) {
         runBot = false;
         bot(runBot);
+
+        setTimeout(() => {
+            playBoard.classList.remove('show');
+            resultBox.classList.add('show');
+        }, 1000);
+
+        wonText.innerHTML = `Player <p>${playerSign}</p> won the game!`;
+    } else {
+        if (getID(1) != "" && getID(2) != "" && getID(3) != "" && getID(4) != "" && getID(5) != "" && getID(6) != "" && getID(7) != "" && getID(8) != "" && getID(9) != "") {
+            runBot = false;
+            bot(runBot);
+    
+            setTimeout(() => {
+                playBoard.classList.remove('show');
+                resultBox.classList.add('show');
+            }, 1000);
+
+            wonText.textContent = `Match has been drawn!`;
+        }
     }
 }
+
+replayBtn.addEventListener('click', () => {
+    window.location.reload();
+});

@@ -6,12 +6,12 @@
 }
 
 body {
-    background: #ff7b01;
+    background: #39ad56;
 }
 
 .select-box, .play-board, .result-box {
     position: absolute;
-    top: 32%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: all 0.5s ease;
@@ -57,7 +57,7 @@ body {
     padding: 8px 0;
     border: none;
     outline: none;
-    background: #ff7b01;
+    background: #39ad56;
     border-radius: 8px;
     color: #fff;
     cursor: pointer;
@@ -106,7 +106,7 @@ body {
     width: 100%;
     padding: 7px 0;
     border-radius: 8px;
-    color: #ff7b01;
+    color: #39ad56;
     font-size: 18px;
     text-align: center;
     cursor: default;
@@ -124,7 +124,7 @@ body {
     left: 0;
     height: 100%;
     width: 50%;
-    background: #ff7b01;
+    background: #39ad56;
     border-radius: 8px;
     z-index: 2;
     transition: all 0.5s ease;
@@ -135,7 +135,7 @@ body {
 }
 
 .players.active span:first-child {
-    color:#ff7b01;
+    color:#39ad56;
 }
 
 .players.active span:nth-child(2) {
@@ -164,7 +164,7 @@ body {
     font-size: 42px;
     text-align: center;
     line-height: 82px;
-    color: #ff7b01;
+    color: #39ad56;
 }
 
 .result-box {
@@ -206,7 +206,7 @@ body {
     padding: 8px 20px;
     border: none;
     outline: none;
-    background: #ff7b01;
+    background: #39ad56;
     border-radius: 8px;
     color: #fff;
     cursor: pointer;
